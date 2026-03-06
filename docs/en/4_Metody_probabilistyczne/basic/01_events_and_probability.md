@@ -396,7 +396,7 @@ Refer to **Task 5**, where the sample space $\Omega$ of Buffon's needle experime
 A needle of length $L$ is thrown randomly onto a plane with equally spaced parallel lines.  
 The distance between neighboring lines is $d$.
 
-Assume that all elementary outcomes in $\Omega$ are **equally likely**.
+Assume that the position of the needle's center (relative to the nearest line) and its orientation angle are **uniformly distributed** (independently).
 
 Describe the following events and compute their probabilities.
 
@@ -419,5 +419,4 @@ Compute the probability of the following events:
 ---
 
 Finally, define **one additional event** in this experiment and compute its probability.
-
 
