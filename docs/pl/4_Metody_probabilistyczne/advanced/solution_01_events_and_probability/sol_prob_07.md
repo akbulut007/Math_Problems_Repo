@@ -1,30 +1,85 @@
 # Task 7 — Dice Probabilities
 
-## One roll
+# Problem
 
-Even number:
+A fair die is rolled.
 
-2,4,6
+Find the probabilities of the following events.
 
-P = 3/6 = 1/2
+For one roll:
 
-Greater than 4:
+• A₁ — the result is even  
+• B₁ — the result is greater than 4  
+• C₁ — the result is at most 3  
 
-5,6
+For two rolls:
 
-P = 2/6 = 1/3
+• A₂ — the sum is 7  
+• B₂ — both results are the same  
+• C₂ — the sum is at least 10  
 
-At most 3:
+For three rolls:
 
-1,2,3
-
-P = 3/6 = 1/2
+• A₃ — the sum is 10  
+• B₃ — exactly two rolls give the same number  
+• C₃ — two twos and one three occur
 
 ---
 
-## Two rolls
+# Step 1 — One die roll
 
-Sum = 7
+Sample space:
+
+Ω₁ = {1, 2, 3, 4, 5, 6}
+
+Number of outcomes:
+
+|Ω₁| = 6
+
+### Event A₁ — even result
+
+Possible outcomes:
+
+2  
+4  
+6
+
+P(A₁) = 3/6 = 1/2
+
+### Event B₁ — result greater than 4
+
+Possible outcomes:
+
+5  
+6
+
+P(B₁) = 2/6 = 1/3
+
+### Event C₁ — result at most 3
+
+Possible outcomes:
+
+1  
+2  
+3
+
+P(C₁) = 3/6 = 1/2
+
+---
+
+# Step 2 — Two die rolls
+
+Sample space:
+
+Ω₂ = {(i,j) : i,j ∈ {1,2,3,4,5,6}}
+
+Number of outcomes:
+
+|Ω₂| = 36
+
+### Event A₂ — sum is 7
+
+Possible outcomes:
 
 (1,6)  
 (2,5)  
@@ -33,34 +88,99 @@ Sum = 7
 (5,2)  
 (6,1)
 
-P = 6/36 = 1/6
+P(A₂) = 6/36 = 1/6
 
-Same numbers:
+### Event B₂ — same result
 
-(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)
+Possible outcomes:
 
-P = 6/36 = 1/6
+(1,1)  
+(2,2)  
+(3,3)  
+(4,4)  
+(5,5)  
+(6,6)
 
-Sum ≥ 10
+P(B₂) = 6/36 = 1/6
 
-P = 6/36 = 1/6
+### Event C₂ — sum at least 10
+
+Possible sums are 10, 11, 12.
+
+Possible outcomes:
+
+(4,6)  
+(5,5)  
+(6,4)  
+(5,6)  
+(6,5)  
+(6,6)
+
+P(C₂) = 6/36 = 1/6
 
 ---
 
-## Three rolls
+# Step 3 — Three die rolls
 
-Total outcomes = 216
+Sample space:
 
-Sum = 10
+Ω₃ = {(i,j,k) : i,j,k ∈ {1,2,3,4,5,6}}
 
-P = 27/216 = 1/8
+Number of outcomes:
 
-Exactly two equal numbers:
+|Ω₃| = 216
 
-P = 90/216 = 5/12
+### Event A₃ — sum is 10
 
-Two twos and one three:
+The number of outcomes with sum 10 is 27.
 
-(2,2,3),(2,3,2),(3,2,2)
+P(A₃) = 27/216 = 1/8
 
-P = 3/216 = 1/72
+### Event B₃ — exactly two equal numbers
+
+The number of such outcomes is 90.
+
+P(B₃) = 90/216 = 5/12
+
+### Event C₃ — two twos and one three
+
+Possible outcomes:
+
+(2,2,3)  
+(2,3,2)  
+(3,2,2)
+
+P(C₃) = 3/216 = 1/72
+
+---
+
+# Final Result
+
+P(A₁) = 1/2  
+P(B₁) = 1/3  
+P(C₁) = 1/2  
+
+P(A₂) = 1/6  
+P(B₂) = 1/6  
+P(C₂) = 1/6  
+
+P(A₃) = 1/8  
+P(B₃) = 5/12  
+P(C₃) = 1/72
+
+---
+
+# Quick intuition
+
+```text
+1 roll
+2, 4, 6 -> even
+
+2 rolls
+sum 7 -> 6 pairs
+same result -> 6 pairs
+
+3 rolls
+sum 10 -> count all triples
+two twos and one three -> 3 orders
+```
