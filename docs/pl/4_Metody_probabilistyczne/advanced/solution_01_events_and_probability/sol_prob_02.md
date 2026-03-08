@@ -1,8 +1,22 @@
 # Task 2 — Rolling a Die
 
-A fair die has numbers:
+# Problem
 
-Ω₁ = {1,2,3,4,5,6}
+A fair die is rolled.
+
+Describe the sample space for:
+
+• one roll  
+• two rolls  
+• three rolls
+
+---
+
+# Step 1 — One die roll
+
+Possible outcomes:
+
+Ω₁ = {1, 2, 3, 4, 5, 6}
 
 Number of outcomes:
 
@@ -10,20 +24,70 @@ Number of outcomes:
 
 ---
 
-## Two rolls
+# Step 2 — Two die rolls
 
-|Ω₂| = 6 × 6 = 36
+We record the results in order.
 
-Example outcomes:
+Examples of outcomes:
 
-(1,3), (2,5), (6,6)
+(1,1)  
+(1,2)  
+(2,5)  
+(6,6)
+
+Sample space:
+
+Ω₂ = {(i,j) : i,j ∈ {1,2,3,4,5,6}}
+
+Number of outcomes:
+
+|Ω₂| = 6 · 6 = 36
 
 ---
 
-## Three rolls
+# Step 3 — Three die rolls
 
-|Ω₃| = 6³ = 216
+We record the results in order.
 
-Example outcome:
+Examples of outcomes:
 
-(2,4,6)
+(1,1,1)  
+(2,4,6)  
+(6,6,6)
+
+Sample space:
+
+Ω₃ = {(i,j,k) : i,j,k ∈ {1,2,3,4,5,6}}
+
+Number of outcomes:
+
+|Ω₃| = 6 · 6 · 6 = 6³ = 216
+
+---
+
+# Final Result
+
+|Ω₁| = 6  
+|Ω₂| = 36  
+|Ω₃| = 216
+
+For **n rolls** the number of outcomes is:
+
+6ⁿ
+
+---
+
+# Quick intuition
+
+```text
+1 roll
+ 1  2  3  4  5  6
+
+2 rolls
+ first roll  -> 6 choices
+ second roll -> 6 choices
+ total       -> 6 × 6 = 36
+
+3 rolls
+ total -> 6 × 6 × 6 = 216
+```
