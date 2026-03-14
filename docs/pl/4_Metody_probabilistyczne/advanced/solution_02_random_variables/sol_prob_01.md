@@ -169,17 +169,22 @@ Formula
 (6 - 1)! = 5!
 
 
-------------------------------------------------
 Final Result
-------------------------------------------------
 
-+---------------------------------------------+-----------------------------------+
-| Situation                                   | Model                             |
-+---------------------------------------------+-----------------------------------+
-| Arranging 7 students in a line              | Permutation                       |
-| Choosing 4 members from 12                  | Combination                       |
-| Gold, Silver, Bronze among 15 athletes      | k-permutation                     |
-| 6-digit PIN code                            | Sequence with repetition          |
-| Arranging letters of BANANA                 | Permutation with repeated elements|
-| Seating 6 people around a round table       | Circular permutation              |
-+---------------------------------------------+-----------------------------------+
+1. Arranging 7 students in a line
+Model: Permutation
+
+2. Choosing 4 members from 12 people
+Model: Combination
+
+3. Assigning gold, silver and bronze among 15 athletes
+Model: k-permutation
+
+4. Forming a 6-digit PIN code
+Model: Sequence with repetition
+
+5. Arranging the letters of BANANA
+Model: Permutation with repeated elements
+
+6. Seating 6 people around a round table
+Model: Circular permutation
