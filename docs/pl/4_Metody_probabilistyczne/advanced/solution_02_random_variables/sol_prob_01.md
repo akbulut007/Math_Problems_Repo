@@ -169,15 +169,13 @@ Formula
 (6 - 1)! = 5!
 
 
-# Final Result
+## Final Result
 
-+-----------------------------------------------+--------------------------------------+-------------------------------------------+
-| Situation                                     | Model                                | Intuition                                 |
-+-----------------------------------------------+--------------------------------------+-------------------------------------------+
-| Arranging 7 students in a line                | Permutation                          | Order matters (ABC ≠ CBA)                 |
-| Choosing 4 members from 12 people             | Combination                          | Order does not matter {A,B,C,D}           |
-| Gold, Silver, Bronze among 15 athletes        | k-permutation                        | Order matters: Gold ≠ Silver ≠ Bronze     |
-| 6-digit PIN code                              | Sequence with repetition             | Digits may repeat (111111 allowed)        |
-| Arranging letters of BANANA                   | Permutation with repeated elements   | A repeats 3 times, N repeats 2 times      |
-| Seating 6 people around a round table         | Circular permutation                 | Rotation gives the same arrangement       |
-+-----------------------------------------------+--------------------------------------+-------------------------------------------+
+| Situation | Model | Intuition |
+|-----------|-------|-----------|
+| Arranging 7 students in a line | Permutation | Order matters (ABC ≠ CBA) |
+| Choosing 4 members from 12 people | Combination | Order does not matter {A,B,C,D} |
+| Gold, Silver, Bronze among 15 athletes | k-permutation | Order matters: Gold ≠ Silver ≠ Bronze |
+| 6-digit PIN code | Sequence with repetition | Digits may repeat (111111 allowed) |
+| Arranging letters of BANANA | Permutation with repeated elements | A repeats 3 times, N repeats 2 times |
+| Seating 6 people around a round table | Circular permutation | Rotation gives the same arrangement |
