@@ -169,40 +169,14 @@ Formula
 (6 - 1)! = 5!
 
 
-# Final Result
+# Quick intuition
+text
+One card
+heart -> 13 out of 52
+king  -> 4 out of 52
 
-Permutation
-7 students in a line
-A B C D E F G
-G F E D C B A
-Order matters
+With replacement
+second draw uses full deck again
 
-Combination
-Choose 4 from 12
-{A,B,C,D}
-{D,C,B,A}
-Same group
-Order does not matter
-
-k-permutation
-Gold Silver Bronze
-A,B,C
-C,B,A
-Different ranking
-
-Sequence with repetition
-6 digit PIN
-123456
-111111
-Digits may repeat
-
-Permutation with repeated elements
-BANANA
-A appears 3 times
-N appears 2 times
-
-Circular permutation
-Round table
-A B C D E F
-B C D E F A
-Rotation is the same arrangement
+Without replacement
+second draw uses 51 cards
