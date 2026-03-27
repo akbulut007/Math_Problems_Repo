@@ -1,92 +1,157 @@
-# Task 4 — Circular Permutations
+Task 4 — Circular Permutations
+1. In how many ways can 7 people sit around a round table?
 
-1. In how many ways can 7 people sit around a round table?  
-2. In how many ways can they sit if two particular people must sit next to each other?  
-3. In how many ways can they sit if those two people must sit opposite each other?
+When people sit around a round table, arrangements that differ only by rotation are counted as the same.
 
----
+So instead of counting all 
+7
+!
+7! linear arrangements, we use the circular permutation formula:
 
-# Step 1 — 7 people sit around a round table
+(
+7
+−
+1
+)
+!
+=
+6
+!
+=
+720
+(7−1)!=6!=720
 
-For circular arrangements, rotations are considered the same.
+So the number of ways is:
 
-So the number of ways to arrange 7 people around a round table is
+720
+720
+	​
 
-(7 - 1)!
-
-= 6!
-
-= 720
-
----
-
-# Step 2 — Two particular people must sit next to each other
+2. In how many ways can they sit if two particular people must sit next to each other?
 
 Let the two particular people be A and B.
 
-If they must sit next to each other, treat them as one block:
+If they must sit together, we treat them as one single block:
 
-(A,B)
-
+(
+𝐴
+,
+𝐵
+)
 or
+(
+𝐵
+,
+𝐴
+)
+(A,B)or(B,A)
 
-(B,A)
+Now instead of 7 separate people, we have:
 
-Now we have:
+1 block
+5 other people
 
-- 1 block
-- 5 other people
+So there are 6 objects around the table.
 
-So in total we have 6 objects around the table.
+The number of circular arrangements of 6 objects is:
 
-The number of circular arrangements of 6 objects is
+(
+6
+−
+1
+)
+!
+=
+5
+!
+=
+120
+(6−1)!=5!=120
 
-(6 - 1)! = 5!
-
-Inside the block, A and B can switch places in
+But inside the block, A and B can switch places in:
 
 2
+ ways
+2 ways
 
-ways.
+Therefore the total number of arrangements is:
 
-So the total number of arrangements is
+5
+!
+⋅
+2
+=
+120
+⋅
+2
+=
+240
+5!⋅2=120⋅2=240
 
-5! · 2
+So the answer is:
 
-= 120 · 2
+240
+240
+	​
 
-= 240
+3. In how many ways can they sit if those two people must sit opposite each other?
 
----
+Let one of the two particular people be fixed first.
 
-# Step 3 — Two particular people must sit opposite each other
+This removes rotational symmetry, which is standard in circular arrangements.
 
-Let one of the two particular people be fixed.
+Once that person is fixed, the other particular person must sit in the seat directly opposite.
+There is only one such seat.
 
-In a circular arrangement, we can fix one person's position to remove rotational symmetry.
+So both of their positions are now determined.
 
-Then the second particular person must sit exactly opposite.
+That leaves the remaining 5 people to be arranged in the remaining 5 seats:
 
-Since there is only one opposite seat, that position is fixed.
+5
+!
+=
+120
+5!=120
 
-Now the remaining 5 people can be arranged in the remaining 5 seats in
+So the number of arrangements is:
 
-5!
-
-ways.
-
-So the total number of arrangements is
-
-5!
-
-= 120
-
----
+120
+120
+	​
 
 ## Final Result
 
-| Situation | Result |
-|-----------|--------|
-| 7 people around a round table | 6! = 720 |
-| Two particular people must sit next to each other | 5! · 2 = 240 |
-| Two particular people must sit opposite each other | 5! = 120 |
+Around a round table: 
+(
+7
+−
+1
+)
+!
+=
+6
+!
+=
+720
+Around a round table: (7−1)!=6!=
+720
+	​
+
+Two particular people next to each other: 
+5
+!
+⋅
+2
+=
+240
+Two particular people next to each other: 5!⋅2=
+240
+	​
+
+Two particular people opposite each other: 
+5
+!
+=
+120
+Two particular people opposite each other: 5!=
+120
