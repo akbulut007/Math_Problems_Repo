@@ -1,52 +1,55 @@
-## 🔢 Task 1 — Binomial Model (Quality Control)
+# 🔢 Task 1 — Binomial Model (Quality Control)
 
-In a factory, screws are inspected.  
-Each screw can be either **good (G)** or **defective (D)**.  
-The probability that a screw is defective is denoted by \( p \).
+## Step 1
 
-Additionally:
+We inspect **3 consecutive screws**.
 
-- Inspections are **independent**
-- Each screw has the same probability \( p \)
-- We inspect **3 consecutive screws**
+Each screw can be:
 
----
+- **G** = good
+- **D** = defective
 
-### 1️⃣ Random experiment
-
-The experiment consists of:
-
-**Inspecting 3 consecutive screws and recording whether each one is good or defective.**
-
-Each trial has two possible outcomes:
-
-- G = Good
-- D = Defective
-
-Thus, this is a sequence of **3 independent Bernoulli trials**.
-
----
-
-### 2️⃣ Sample space \( \Omega \)
-
-Each screw has 2 possible outcomes, so:
+The probability that a screw is defective is:
 
 \[
-|\Omega| = 2^3 = 8
+p
 \]
+
+So the probability that a screw is good is:
+
+\[
+1-p
+\]
+
+The inspections are independent.
+
+---
+
+## Step 2
+
+Each of the 3 screws has **2 possible outcomes**.
+
+So the sample space is:
 
 \[
 \Omega = \{GGG, GGD, GDG, DGG, GDD, DGD, DDG, DDD\}
 \]
 
+Number of all possible outcomes:
+
+\[
+2^3 = 8
+\]
+
 ---
 
-### 3️⃣ Probabilities of outcomes
+## Step 3
 
-- \( P(G) = 1 - p \)
-- \( P(D) = p \)
+Now we assign probabilities to the sample points.
 
-Since trials are independent:
+Since the inspections are independent, we multiply the probabilities.
+
+For example:
 
 \[
 P(GGG) = (1-p)^3
@@ -82,34 +85,30 @@ P(DDD) = p^3
 
 ---
 
-### 4️⃣ Definition of success
+## Step 4
 
-In this model, we define:
-
-**Success = a defective screw**
-
-Let:
+In this model, a **success** means:
 
 \[
-X = \text{number of defective screws among 3}
+\text{a defective screw}
 \]
 
-Then:
+Let \(X\) be the number of defective screws among the 3 inspected screws.
+
+Then the random variable has binomial distribution:
 
 \[
-X \sim \text{Binomial}(n=3, p)
+X \sim \mathrm{Binomial}(3,p)
 \]
 
 ---
 
-## ✅ Final Summary
+## 📊 Final Summary
 
-| Element | Result |
-|--------|--------|
-| Model | Binomial |
-| Number of trials | \( n = 3 \) |
-| Probability of success | \( p \) |
-| Success definition | Defective screw |
-| Sample space size | 8 |
-
----
+| Step | Result |
+|------|--------|
+| Step 1 | 3 independent screw inspections |
+| Step 2 | \(\Omega = \{GGG, GGD, GDG, DGG, GDD, DGD, DDG, DDD\}\) |
+| Step 3 | Probabilities are found by multiplication |
+| Step 4 | Success = defective screw |
+| Model | \(X \sim \mathrm{Binomial}(3,p)\) |
