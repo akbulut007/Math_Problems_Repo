@@ -2,107 +2,36 @@
 
 ## ✅ Solution
 
-### Step 1
-
-We inspect **3 consecutive screws**.
-
+STEP 1 — Describe the random experiment
+We check 3 screws one by one.
 Each screw can be:
+- Good (G)
+- Defective (D)
 
-- **G** = good  
-- **D** = defective  
+STEP 2 — Determine the sample space (Ω)
+All possible outcomes of 3 checks:
 
-\[
-P(D)=p, \quad P(G)=1-p
-\]
+Ω = {GGG, GGD, GDG, GDD, DGG, DGD, DDG, DDD}
 
-This is a binomial experiment with:
+STEP 3 — Assign probabilities
+Let p = probability of defective (D)
+Then (1 - p) = probability of good (G)
 
-\[
-n=3
-\]
+Now calculate each:
 
----
+P(GGG) = (1-p)^3  
+P(GGD) = (1-p)^2 * p  
+P(GDG) = (1-p)^2 * p  
+P(GDD) = (1-p) * p^2  
+P(DGG) = (1-p)^2 * p  
+P(DGD) = (1-p) * p^2  
+P(DDG) = (1-p) * p^2  
+P(DDD) = p^3  
 
-### Step 2
-
-The sample space is:
-
-\[
-Ω=\{(G,G,G),(G,G,D),(G,D,G),(D,G,G),(G,D,D),(D,G,D),(D,D,G),(D,D,D)\}
-\]
-
-\[
-|Ω|=2^3=8
-\]
-
----
-
-### Step 3
-
-Since the trials are independent, probabilities are computed by multiplication:
-
-\[
-P((G,G,G))=(1-p)^3
-\]
-
-\[
-P((G,G,D))=(1-p)^2p
-\]
-
-\[
-P((G,D,G))=(1-p)^2p
-\]
-
-\[
-P((D,G,G))=(1-p)^2p
-\]
-
-\[
-P((G,D,D))=(1-p)p^2
-\]
-
-\[
-P((D,G,D))=(1-p)p^2
-\]
-
-\[
-P((D,D,G))=(1-p)p^2
-\]
-
-\[
-P((D,D,D))=p^3
-\]
-
----
-
-### Step 4
-
-A success means:
-
-\[
-\text{defective screw}
-\]
-
-Let:
-
-\[
-X=\text{number of defective screws}
-\]
-
-Then:
-
-\[
-X \sim \mathrm{Binomial}(3,p)
-\]
-
----
+STEP 4 — Define success
+Success = finding a defective screw
 
 ## 📊 Final Summary
 
-| Item | Result |
-|------|--------|
-| Model | Binomial |
-| Trials | \(n=3\) |
-| Probability | \(p\) |
-| Sample space | \(Ω\) with 8 elements |
-| Random variable | \(X \sim \mathrm{Binomial}(3,p)\) |
+- Each "D" = success
+- Each "G" = failure
